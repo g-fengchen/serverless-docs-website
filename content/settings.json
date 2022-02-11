@@ -1,0 +1,33 @@
+{
+  "title": "Serverless Devs",
+  "url": "https://www.serverless-devs.com",
+  "logo": {
+    "light": "/logo-dark.png",
+    "dark": "/logo-light.png"
+  },
+  "github": "Serverless-Devs/Serverless-Devs",
+  "twitter": "@heimamba",
+  "nav": [
+    {
+      "title": "首页",
+      "slug": "index",
+      "to": "/"
+    },
+    {
+      "title": "文档",
+      "name": "docs",
+      "items": [
+        {
+          "title": "Serverless Devs",
+          "slug": "serverless-devs",
+          "to": "/serverless-devs/readme"
+        },
+        {
+          "title": "函数计算(FC)组件",
+          "slug": "fc",
+          "to": "/fc/README"
+        }
+      ]
+    }
+  ]
+}
