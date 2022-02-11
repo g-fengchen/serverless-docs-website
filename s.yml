@@ -3,17 +3,16 @@ access: "default"
 
 services:
   website-starter:
-    component: devsapp/website
+    component: oss
     actions:
       pre-deploy:
         - run: npm run generate
           path: ./
     props:
-      bucket: 'aidankun'
-      src:
-        codeUri: ./
-        publishDir: ./dist
-        index: index.html
+      bucket: 'alidankun'
+      codeUri: ./dist
+      acl: public-read
+      index: index.html
       region: cn-hangzhou
-      hosts:
-        - host: auto
+      # hosts:
+      #   - host: auto
