@@ -1,10 +1,3 @@
----
-title: 常见问题
-description: 'fc租金啊常见问题汇总'
-position: 6
-category: '快速开始'
----
-
 # 常见小贴士
 
 - [Serverless Devs和FC组件的关系](#serverless-devs和FC组件的关系)

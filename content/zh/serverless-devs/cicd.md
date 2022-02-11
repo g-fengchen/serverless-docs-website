@@ -1,10 +1,3 @@
----
-title: CI/CD平台集成
-description: 'CI/CD平台集成'
-position: 5
-category: '快速开始'
----
-
 # 与 CI/CD 平台/工具集成
 
 - [与 Github Action 的集成](#与-github-action-的集成)

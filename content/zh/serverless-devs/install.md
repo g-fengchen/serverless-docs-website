@@ -1,9 +1,3 @@
----
-title: 工具安装与升级
-description: '工具安装与升级'
-position: 2
-category: '快速开始'
----
 # 工具安装与升级
 
 - [工具安装](#工具安装)

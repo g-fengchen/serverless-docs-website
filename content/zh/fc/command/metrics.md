@@ -1,10 +1,3 @@
----
-title: 指标查询 metrics
-description: '指标查询 metrics'
-position: 1
-category: '可观测性	'
----
-
 # Metrics 命令
 
 `metrics` 命令是查看函数指标信息的命令。

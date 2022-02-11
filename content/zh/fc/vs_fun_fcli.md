@@ -1,10 +1,3 @@
----
-title: Serverless Devs 与 Funcraft/Fcli 的对比
-description: 'Serverless Devs 与 Funcraft/Fcli 的对比'
-position: 5
-category: '快速开始'
----
-
 # Serverless Devs 与 Funcraft/Fcli 的对比
 
 - [Serverless Devs 与 Funcraft/Fcli 的对比](#serverless-devs-与-funcraftfcli-的对比)

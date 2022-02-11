@@ -1,10 +1,3 @@
----
-title: 组件集合
-description: '组件集合'
-position: 7
-category: '快速开始'
----
-
 # Awesome
 
 ## 组件集合

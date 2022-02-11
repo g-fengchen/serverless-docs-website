@@ -1,9 +1,3 @@
----
-title: Yaml规范
-description: '阿里云函数计算（FC）组件的Yaml规范'
-position: 4
-category: '快速开始'
----
 # Yaml规范说明
 
 - [Yaml完整配置](#Yaml完整配置)
