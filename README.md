@@ -1,12 +1,4 @@
-# docs
-
-## Setup
-
-Install dependencies:
-
-```bash
-npm run install
-```
+# 开发
 
 ## Development
 
@@ -22,6 +14,5 @@ This will create the `dist/` directory for publishing to static hosting:
 npm run generate
 ```
 
-To preview the static generated app, run `npm run start`
-
-For detailed explanation on how things work, checkout [nuxt/content](https://content.nuxtjs.org) and [@nuxt/content theme docs](https://content.nuxtjs.org/themes-docs).
+## 部署
+通过直接通过 **Serverless应用中心** ，进行 [一键部署](https://fcnext.console.aliyun.com/applications/create?clone_url=https://github.com/Serverless-Devs/serverless-website.git)
