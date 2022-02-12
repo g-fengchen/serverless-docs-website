@@ -11,7 +11,7 @@ services:
         - run: npm run generate
           path: ./
     props:
-      bucket: 'alidankun'
+      bucket: 'serverless-devs-docs'
       codeUri: ./dist
       acl: public-read
       index: index.html
