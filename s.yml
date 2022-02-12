@@ -1,5 +1,5 @@
 edition: 1.0.0
-access: "default"
+access: "serverless-devs"
 
 services:
   website-starter:
