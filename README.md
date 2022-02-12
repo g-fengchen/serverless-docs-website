@@ -1,12 +1,12 @@
 # 开发
 
-## Development
+## 本地启动
 
 ```bash
 npm run dev
 ```
 
-## Static Generation
+## 生成静态网站(SSG)
 
 This will create the `dist/` directory for publishing to static hosting:
 
