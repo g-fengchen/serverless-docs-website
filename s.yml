@@ -6,6 +6,8 @@ services:
     component: oss
     actions:
       pre-deploy:
+        - run: npm i
+          path: ./
         - run: npm run generate
           path: ./
     props:
