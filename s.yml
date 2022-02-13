@@ -16,7 +16,6 @@ services:
       bucket: "serverless-devs-docs"
       codeUri: ./dist
       acl: public-read
-
       region: cn-hangzhou
       static:
         index: index.html
