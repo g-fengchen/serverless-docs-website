@@ -6,7 +6,7 @@ services:
     component: oss
     actions:
       pre-deploy:
-        - run: npm i
+        - run: yarn install
           path: ./
         - run: npm run generate
           path: ./
