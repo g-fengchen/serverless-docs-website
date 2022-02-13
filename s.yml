@@ -13,10 +13,15 @@ services:
         - run: npm run generate
           path: ./
     props:
-      bucket: 'serverless-devs-docs'
+      bucket: "serverless-devs-docs"
       codeUri: ./dist
       acl: public-read
-      index: index.html
+
       region: cn-hangzhou
+      static:
+        index: index.html
+        subDir:
+          type: index
+
       # hosts:
       #   - host: auto
