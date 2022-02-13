@@ -13,9 +13,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install
+      # - uses: borales/actions-yarn@v2.3.0
+      #   with:
+      #     cmd: install
       - run: npm install -g @serverless-devs/s
       - run: s config add --AccountID ${{secrets.ALIYUN_ACCOUNT_ID}}  --AccessKeyID ${{secrets.ALIYUN_ACCESS_KEY_ID}}  --AccessKeySecret ${{secrets.ALIYUN_ACCESS_KEY_SECRET}} -a serverless-devs -f
       - name: deploy serverless devs
