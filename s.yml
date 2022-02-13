@@ -8,7 +8,7 @@ services:
       pre-deploy:
         - run: sudo yarn install
           path: ./
-        - run: sudo chmod 755 node_modules
+        - run: sudo chmod -R 755 node_modules
           path: ./
         - run: npm run generate
           path: ./
