@@ -6,7 +6,9 @@ services:
     component: oss
     actions:
       pre-deploy:
-        - run: yarn install
+        - run: sudo yarn install
+          path: ./
+        - run: sudo chomd 755 node_modules
           path: ./
         - run: npm run generate
           path: ./
