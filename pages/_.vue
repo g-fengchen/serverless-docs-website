@@ -13,8 +13,7 @@
       }"
     >
       <article class="prose dark:prose-dark max-w-none lg:px-8">
-        <h1 class="flex items-center justify-between">
-          {{ document.title }}
+        <h1 class="flex items-center justify-between" v-if="document.badge">
           <Badge v-if="document.badge">{{ document.badge }}</Badge>
         </h1>
         <div v-if="document.subtitle" class="-mt-4">
