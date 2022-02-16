@@ -107,21 +107,28 @@ export default {
     },
   },
   methods: {
+    getDocPath(doc) {
+      const basePath = this.$i18n.locale === "zh" ? "" : "/en";
+      return `${basePath}/${doc.to}`;
+    },
     getCategories() {
+      const basePath = this.$i18n.locale === "zh" ? "" : "/en";
       const currentPath = this.$router.history.current.path;
-      if (currentPath.startsWith("/serverless-devs")) {
-        return this.listCategories("/serverless-devs");
-      } else if (currentPath.startsWith("/fc")) {
-        return this.listCategories("/fc");
+      const docsSetting = _.find(this.settings.nav, item => item.name ==='docs');
+      for(let doc of docsSetting.items) {
+        const slugPath = `${basePath}/${doc.slug}`;
+        if (currentPath.startsWith(slugPath)) {
+          return this.listCategories(`/${this.$i18n.locale}/${doc.slug}`);
+        }
       }
     },
-    listCategories(catePath) {
+    listCategories(path) {
       const cates = this.$store.state.categories[this.$i18n.locale];
       const currentCates = {};
       _.each(cates, (item, key) => {
         if (!key) return;
         const cateItems = _.filter(item, (cate) =>
-          cate.to.startsWith(catePath)
+          cate.path.startsWith(path)
         );
         if (!_.isEmpty(cateItems)) {
           currentCates[key] = cateItems;
@@ -130,7 +137,7 @@ export default {
       return currentCates;
     },
     isCategoryActive(documents) {
-      return documents.some((document) => document.to === this.$route.fullPath);
+      return documents.some((document) => this.getDocPath(document.to) === this.$route.fullPath);
     },
     isDocumentNew(document) {
       if (process.server) {

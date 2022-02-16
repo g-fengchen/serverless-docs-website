@@ -20,7 +20,7 @@
               'text-gray-700': !items.active,
             }"
           >
-            <NuxtLink :to="items.to" class="inline-block h-full">
+            <NuxtLink :to="localePath(items.to)" class="inline-block h-full">
               {{ items.title }}
             </NuxtLink>
           </el-dropdown-item>
