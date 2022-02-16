@@ -85,11 +85,13 @@ export default {
         return;
       }
       this.searching = true;
-      const results = await this.$content(this.$i18n.locale, { deep: true })
-        .sortBy("position", "asc")
-        .only(["title", "slug", "category", "to"])
-        .search(q)
-        .fetch();
+      // limit(12).
+      const results = await this.$content(this.$i18n.locale, { deep: true }).sortBy('position', 'asc').only(['title', 'slug', 'category', 'to']).search(q).fetch()
+      // const results = await this.$content(this.$i18n.locale, { deep: true })
+      //   .sortBy("position", "asc")
+      //   .only(["title", "slug", "category", "to"])
+      //   .search(q)
+      //   .fetch();
 
       const topResults = _.slice(
         _.filter(results, (item) => {
@@ -105,7 +107,7 @@ export default {
       );
 
       this.results = _.slice(
-        _.uniqBy(_.concat(topResults, results), (item) => item.path),
+        _.uniqBy(_.concat(topResults, results), (item) => item.to),
         0,
         12
       );

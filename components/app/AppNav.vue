@@ -118,7 +118,7 @@ export default {
       for(let doc of docsSetting.items) {
         const slugPath = `${basePath}/${doc.slug}`;
         if (currentPath.startsWith(slugPath)) {
-          return this.listCategories(`/${this.$i18n.locale}/${doc.slug}`);
+          return this.listCategories(`/${doc.slug}`);
         }
       }
     },
@@ -127,8 +127,9 @@ export default {
       const currentCates = {};
       _.each(cates, (item, key) => {
         if (!key) return;
+        console.log('item', item);
         const cateItems = _.filter(item, (cate) =>
-          cate.path.startsWith(path)
+          cate.to.startsWith(path)
         );
         if (!_.isEmpty(cateItems)) {
           currentCates[key] = cateItems;
