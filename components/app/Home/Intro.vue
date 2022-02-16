@@ -18,7 +18,7 @@
         type="text"
         class="flex items-center border-inherit"
         style="color: #fff; padding: 0 1rem"
-        :loading="stars <= 0"
+        @click="handlerStar"
       >
         <IconGithub class="w-4 h-4 text-white mr-1 inline-block -mt-1" />{{
           stars
@@ -48,6 +48,7 @@ export default {
     },
   },
   async mounted() {
+    this.stars = localStorage.getItem("serverless_devs_star");
     try {
       const data = await fetch(this.repo)
         .then((res) => {
@@ -58,9 +59,14 @@ export default {
         })
         .then((res) => res.json());
       this.stars = parseInt(data.stargazers_count, 10);
+      localStorage.setItem("serverless_devs_star", this.stars);
     } catch (e) {}
   },
   methods: {
+    handlerStar() {
+      window.location.href =
+        "https://github.com/Serverless-Devs/Serverless-Devs";
+    },
     handlerRouterStart() {
       this.$router.push({ path: this.quickStart });
     },

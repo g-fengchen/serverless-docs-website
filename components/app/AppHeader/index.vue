@@ -48,7 +48,8 @@
           }"
         >
           <div class="flex items-center">
-            <HeaderLink>首页</HeaderLink>
+            <HeaderLink />
+            <AppLangSwitcher class="ml-4"/>
             <a
               v-if="settings.github"
               :href="githubUrls.repo"
@@ -63,7 +64,6 @@
             >
               <IconGithub class="w-5 h-5" />
             </a>
-
             <button
               v-if="settings.layout !== 'single'"
               class="lg:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 focus:outline-none -mr-2"

@@ -9,20 +9,24 @@
   "nav": [
     {
       "title": "首页",
+      "en_title": "Index",
       "slug": "index",
       "to": "/"
     },
     {
       "title": "文档",
+      "en_title": "Docs",
       "name": "docs",
       "items": [
         {
           "title": "Serverless Devs",
+          "en_title": "Serverless Devs",
           "slug": "serverless-devs",
           "to": "/serverless-devs/readme"
         },
         {
           "title": "函数计算(FC)组件",
+          "en_title": "Aliyun FC",
           "slug": "fc",
           "to": "/fc/readme"
         }

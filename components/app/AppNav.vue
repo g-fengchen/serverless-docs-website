@@ -127,7 +127,6 @@ export default {
       const currentCates = {};
       _.each(cates, (item, key) => {
         if (!key) return;
-        console.log('item', item);
         const cateItems = _.filter(item, (cate) =>
           cate.to.startsWith(path)
         );

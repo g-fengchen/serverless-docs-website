@@ -9,7 +9,8 @@
           }"
           class="text-base dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 cursor-pointer whitespace-no-wrap"
         >
-          {{ link.title }}<i class="el-icon-arrow-down el-icon--right"></i>
+          {{ $i18n.locale === "en" ? link.title : link.en_title }}
+          <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item
@@ -21,7 +22,7 @@
             }"
           >
             <NuxtLink :to="localePath(items.to)" class="inline-block h-full">
-              {{ items.title }}
+              {{ $i18n.locale === "en" ? items.title : items.en_title }}
             </NuxtLink>
           </el-dropdown-item>
         </el-dropdown-menu>
@@ -35,7 +36,7 @@
           'text-gray-700': !link.active,
         }"
       >
-        {{ link.title }}
+        {{ $i18n.locale === "en" ? link.title : link.en_title }}
       </NuxtLink>
     </span>
   </div>
