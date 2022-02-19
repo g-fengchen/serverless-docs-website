@@ -11,7 +11,7 @@
     </h1>
 
     <h2 class="font-normal text-body-base text-2xl text-gray-200">
-      Serverless 应用全生命周期管理工具
+      {{ $t("home.intro") }}
     </h2>
     <div class="flex mt-12 mr-12">
       <el-button
@@ -26,7 +26,7 @@
         Github stars
       </el-button>
       <el-button class="ml-4" size="small" @click="handlerRouterStart">
-        <NuxtLink :to="quickStart"> 开始使用 </NuxtLink>
+        <NuxtLink :to="quickStart"> {{ $t("home.start") }} </NuxtLink>
       </el-button>
     </div>
   </section>

@@ -1,9 +1,9 @@
 <template>
   <nav
-    class="fixed top-0 z-40 w-full border-b dark:border-gray-800 bg-white dark:bg-gray-900"
+    class="fixed top-0 z-40 w-full border-b dark:border-gray-800 dark:bg-gray-900"
     :class="{ 'shadow border-transparent': scrolled }"
     @click="scrollToTop"
-    style="box-shadow: 0 1px 4px 0 rgb(0 21 41 / 12%);"
+    style="box-shadow: 0 1px 4px 0 rgb(0 21 41 / 12%); background-color: rgb(250 251 255)!important;"
   >
     <div class="container mx-auto flex-1">
       <div class="flex items-center justify-between h-16">
