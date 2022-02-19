@@ -6,14 +6,14 @@ category: '概览'
 ---
 
 ![图片alt](https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635756716877_20211101085157044368.png)
-<p align="center">
-  <a href="https://nodejs.org/en/">
+<p align="center" class="flex justify-center">
+  <a href="https://nodejs.org/en/" class="ml-1">
     <img src="https://img.shields.io/badge/node-%3E%3D%2010.8.0-brightgreen" alt="node.js version">
   </a>
-  <a href="https://github.com/devsapp/fc/blob/master/LICENSE">
+  <a href="https://github.com/devsapp/fc/blob/master/LICENSE" class="ml-1">
     <img src="https://img.shields.io/badge/License-MIT-green" alt="license">
   </a>
-  <a href="https://github.com/devsapp/fc/issues">
+  <a href="https://github.com/devsapp/fc/issues" class="ml-1">
     <img src="https://img.shields.io/github/issues/devsapp/fc" alt="issues">
   </a>
   </a>
@@ -58,15 +58,15 @@ category: '概览'
 
 # 项目贡献
 
-我们非常希望您可以和我们一起贡献这个项目。贡献内容包括不限于代码的维护、应用/组件的贡献、文档的完善等，更多详情可以参考[ 🏆 贡献指南](./CONTRIBUTING.md)。
+我们非常希望您可以和我们一起贡献这个项目。贡献内容包括不限于代码的维护、应用/组件的贡献、文档的完善等，更多详情可以参考[ 🏆 贡献指南](./../../CONTRIBUTING.md)。
 
 与此同时，我们也非常感谢所有[ 👬 参与贡献的小伙伴](https://github.com/devsapp/fc/graphs/contributors) ，为 Serverless Devs FC 组件项目贡献的努力和汗水。
 
 # 开源许可
 
-Serverless Devs FC 组件遵循 [MIT License](./LICENSE) 开源许可。
+Serverless Devs FC 组件遵循 [MIT License](./../../LICENSE) 开源许可。
 
-位于`node_modules`和外部目录中的所有文件都是本软件使用的外部维护库，具有自己的许可证；我们建议您阅读它们，因为它们的条款可能与[MIT License](./LICENSE)的条款不同。
+位于`node_modules`和外部目录中的所有文件都是本软件使用的外部维护库，具有自己的许可证；我们建议您阅读它们，因为它们的条款可能与[MIT License](./../../LICENSE)的条款不同。
 
 # 交流社区
 
