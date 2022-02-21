@@ -17,7 +17,7 @@ services:
       codeUri: ./dist
       acl: public-read
       region: cn-hangzhou
-      static:
+      website:
         index: index.html
         subDir:
           type: index
