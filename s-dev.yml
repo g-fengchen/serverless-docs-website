@@ -24,7 +24,6 @@ services:
         codeUri: "./"
         runtime: custom
         timeout: 60
-        caPort: 3000
         # customRuntimeConfig:
         #   command:
         #     - npx
