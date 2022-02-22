@@ -1,6 +1,7 @@
 import theme from "./index";
 
 export default theme({
+  telemetry: false,
   important: true,
   docs: {
     primaryColor: "#1b58f4",

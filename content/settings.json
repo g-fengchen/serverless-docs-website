@@ -5,7 +5,7 @@
     "light": "/logo-dark.png",
     "dark": "/logo-light.png"
   },
-  "github": "Serverless-Devs/Serverless-Devs",
+  "github": "Serverless-Devs/serverless-website",
   "nav": [
     {
       "title": "首页",

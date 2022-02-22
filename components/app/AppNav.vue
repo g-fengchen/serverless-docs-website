@@ -47,39 +47,6 @@
             </li>
           </ul>
         </li>
-        <li class="lg space-x-2">
-          <p
-            class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs"
-          >
-            More
-          </p>
-          <div class="flex items-center space-x-4">
-            <a
-              v-if="settings.twitter"
-              :href="`https://twitter.com/${settings.twitter}`"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Twitter"
-              name="Twitter"
-              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
-            >
-              <IconTwitter class="w-5 h-5" />
-            </a>
-            <a
-              v-if="settings.github"
-              :href="githubUrls.repo"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Github"
-              name="Github"
-              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
-            >
-              <IconGithub class="w-5 h-5" />
-            </a>
-            <AppLangSwitcher />
-            <AppColorSwitcher />
-          </div>
-        </li>
       </ul>
     </div>
   </aside>
