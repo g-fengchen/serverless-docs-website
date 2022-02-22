@@ -13,7 +13,7 @@ services:
         - run: npm run generate
           path: ./
     props:
-      bucket: "serverless-devs-docs"
+      bucket: "serverless-devs-docs-hongkong"
       codeUri: ./dist
       acl: public-read
       region: cn-hongkong
