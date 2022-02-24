@@ -12,10 +12,10 @@ vars: # 全局变量
 services:
   website-starter:
     component: fc
-    actions:
-      pre-deploy:
-        - run: s nas upload -r ./.s/build/artifacts/serverless-website/docs-sync/node_modules  /mnt/auto
-          path: ./
+    # actions:
+    #   pre-deploy:
+    #     - run: s nas upload -r ./.s/build/artifacts/serverless-website/docs-sync/node_modules  /mnt/auto
+    #       path: ./
     props:
       region: ${vars.region}
       service: ${vars.service}
