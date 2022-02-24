@@ -23,7 +23,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "npx nuxt generate"
+    "generate": "npx nuxt generate",
+    "deploy": "s deploy -y --use-local --skip-actions -t s.dev.yaml"
   },
   "dependencies": {
     "@docsearch/css": "^3.0.0-alpha.50",
@@ -49,9 +50,7 @@
     "tailwind-css-variables": "^2.0.3",
     "theme-colors": "^0.0.5",
     "vue-clickaway": "^2.2.2",
-    "vue-scrollactive": "^0.9.3"
-  },
-  "devDependencies": {
+    "vue-scrollactive": "^0.9.3",
     "@nuxt/typescript-build": "^2.1.0"
   }
 }

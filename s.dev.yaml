@@ -6,6 +6,7 @@ vars: # 全局变量
   service:
     name: serverless-website
     nasConfig: Auto
+    logConfig: Auto
     description: "Serverless Devs website docs"
 
 services:
@@ -23,7 +24,8 @@ services:
         description: "Serverless Devs Web Framework Next.js Function"
         codeUri: "./"
         runtime: custom
-        timeout: 60
+        memorySize: 1024
+        timeout: 120
         # customRuntimeConfig:
         #   command:
         #     - npx
