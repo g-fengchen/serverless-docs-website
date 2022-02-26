@@ -44,7 +44,7 @@ export default {
   computed: {
     ...mapGetters(["githubUrls"]),
     repo() {
-      return this.githubUrls.api.repo;
+      return this.githubUrls.api.devsRepo;
     },
   },
   async mounted() {
