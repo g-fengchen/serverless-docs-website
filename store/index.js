@@ -19,7 +19,7 @@ export const getters = {
     return state.settings
   },
   githubUrls (state) {
-    const { github = '', githubApi = '' } = state.settings
+    const { github = '', githubApi = '', devs = '' } = state.settings
 
     // GitHub Enterprise
     if (github.startsWith('http') && githubApi.startsWith('http')) {
@@ -37,7 +37,8 @@ export const getters = {
       repo: `https://github.com/${github}`,
       api: {
         repo: `https://api.github.com/repos/${github}`,
-        releases: `https://api.github.com/repos/${github}/releases`
+        releases: `https://api.github.com/repos/${github}/releases`,
+        devsRepo: `https://api.github.com/repos/${devs}`,
       }
     }
   },
