@@ -4,6 +4,7 @@
     :class="{
       'lg:-mx-8': settings.layout === 'single'
     }"
+    @click="handleClick"
   >
     <div
       class="w-full py-4 lg:pt-8 lg:pb-4 dark:border-gray-800"
@@ -34,6 +35,7 @@
 <script>
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
+import _ from "lodash";
 
 import AppCopyButton from '~/components/app/AppCopyButton'
 
@@ -78,6 +80,29 @@ export default {
         { hid: 'twitter:title', name: 'twitter:title', content: this.document.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.document.description }
       ]
+    }
+  },
+  methods: {
+    handleClick(event) {
+      if (event.target.nodeName.toLowerCase() === 'a') {
+        if (event.preventDefault) {
+          event.preventDefault();
+        } else {
+          window.event.returnValue = true;
+        }
+
+        const target = event.target || event.srcElement;
+        var url = target.getAttribute("href");
+        url = decodeURI(url);
+        if(_.endsWith(url, '.md')){
+          url = url.substring(0, url.length - 3);
+        }
+        if (target.getAttribute("target") === '_blank') {
+          window.open(url)
+        } else {
+          this.$router.push(url);
+        }
+      }
     }
   },
   computed: {
