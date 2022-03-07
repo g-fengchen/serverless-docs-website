@@ -39,8 +39,8 @@ export default {
         this.githubUrls.repo,
         'edit',
         this.settings.defaultBranch,
-        this.settings.defaultDir,
-        `content${this.document.path}${this.document.extension}`
+        // this.settings.defaultDir,
+        `content${this.document.path}${this.document.extension}.md`
       ].filter(path => !!path).join('/')
     }
   }
