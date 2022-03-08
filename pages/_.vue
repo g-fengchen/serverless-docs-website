@@ -24,7 +24,7 @@
         <NuxtContent :document="document" />
       </article>
 
-      <AppPageBottom :document="document" />
+      <AppPageBottom :document="document" :filePath="path" />
       <AppPrevNext :prev="prev" :next="next" />
     </div>
 
@@ -65,7 +65,8 @@ export default {
     return {
       document,
       prev,
-      next
+      next,
+      path,
     }
   },
   head () {
@@ -84,24 +85,22 @@ export default {
   },
   methods: {
     handleClick(event) {
-      if (event.target.nodeName.toLowerCase() === 'a') {
-        if (event.preventDefault) {
-          event.preventDefault();
-        } else {
-          window.event.returnValue = true;
-        }
+      const aTag = _.find(event.path, item => (item.nodeName?.toLowerCase() === 'a'))
+      if(!aTag) return;
 
-        const target = event.target || event.srcElement;
-        var url = target.getAttribute("href");
-        url = decodeURI(url);
-        if(_.endsWith(url, '.md')){
-          url = url.substring(0, url.length - 3);
-        }
-        if (target.getAttribute("target") === '_blank') {
-          window.open(url)
-        } else {
-          this.$router.push(url);
-        }
+      if (event.preventDefault) {
+        event.preventDefault();
+      } else {
+        window.event.returnValue = true;
+      }
+
+      let url = aTag.getAttribute("href");
+      url = decodeURI(url);
+      if (aTag.getAttribute("target") === '_blank') {
+        window.open(url)
+      } else {
+        url = url.replace(/.md|zh\//ig, '' );
+        this.$router.push(url);
       }
     }
   },
