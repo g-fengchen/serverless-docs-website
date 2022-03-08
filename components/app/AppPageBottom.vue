@@ -17,11 +17,16 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import _ from "lodash"
 
 export default {
   props: {
     document: {
       type: Object,
+      required: true
+    },
+    filePath: {
+      type: String,
       required: true
     }
   },
@@ -34,13 +39,19 @@ export default {
       if (!this.settings.github) {
         return
       }
+      const docUrls = _.split(this.filePath, '/').filter(path => !!path)
+      const [lang, repo, ...file] = docUrls
+
+      const repoUrl = repo === 'fc' ? this.githubUrls.fcRepo : this.githubUrls.repo
+      const defaultBranch = repo === 'fc' ? 'main' : 'master'
+      const filePath = file.join('/')
 
       return [
-        this.githubUrls.repo,
+        repoUrl,
         'edit',
-        this.settings.defaultBranch,
-        // this.settings.defaultDir,
-        `content${this.document.path}${this.document.extension}.md`
+        defaultBranch,
+        this.settings.defaultDir,
+        `${lang}/${filePath}${this.document.extension}`
       ].filter(path => !!path).join('/')
     }
   }
