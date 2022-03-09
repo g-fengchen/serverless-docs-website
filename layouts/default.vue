@@ -105,5 +105,10 @@ export default defineComponent({
       return !_.isEmpty(currentNav);
     },
   },
+  beforeMount() {
+    if(location.protocol === 'http:' && _.endsWith(location.hostname, 'serverless-devs.com')) {
+      location.href = location.href.replace('http:', 'https:');
+    }
+  }
 });
 </script>
