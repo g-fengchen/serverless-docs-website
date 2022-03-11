@@ -1,5 +1,8 @@
 <template>
-  <div class="pt-16 bg-gray-100">
+  <div class="bg-gray-100" :class="{'pt-16': !isHome }">
+    <a v-if="isHome" href="https://serverless-devs-docs-hongkong.oss-cn-hongkong.aliyuncs.com/Serverless_cookbook.pdf" target="_blank"  class="h-10">
+      <p class="leading-10 bg-primary-500 hover:bg-primary-400 text-white	text-center" >Serverless开发速查手册重磅发布！</p>
+    </a>
     <AppHeader />
 
     <main class="container mx-auto px-4 lg:px-8" v-if="isDocNav">

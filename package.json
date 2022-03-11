@@ -48,7 +48,6 @@
     "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.20.4",
     "prism-themes": "^1.5.0",
-    "redirect-ssl": "^3.0.0",
     "tailwind-css-variables": "^2.0.3",
     "theme-colors": "^0.0.5",
     "vue-clickaway": "^2.2.2",
