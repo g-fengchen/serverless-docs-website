@@ -24,5 +24,4 @@ export default theme({
     defaultLocale: "zh",
   },
   buildModules: ["@nuxtjs/composition-api/module", "@nuxt/typescript-build"],
-  serverMiddleware: ["redirect-ssl"],
 });

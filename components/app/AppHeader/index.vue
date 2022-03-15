@@ -1,7 +1,7 @@
 <template>
   <nav
-    class="fixed top-0 z-40 w-full border-b dark:border-gray-800 dark:bg-gray-900"
-    :class="{ 'shadow border-transparent': scrolled }"
+    class="top-0 z-40 w-full border-b dark:border-gray-800 dark:bg-gray-900"
+    :class="{ 'shadow border-transparent': scrolled, 'fixed' : !isHome || scrolled > 40 }"
     @click="scrollToTop"
     style="box-shadow: 0 1px 4px 0 rgb(0 21 41 / 12%); background-color: rgb(250 251 255)!important;"
   >
@@ -90,6 +90,12 @@ export default defineComponent({
   component: {
     HeaderLink,
   },
+  setup() {
+    const { isHome } = useNav();
+    return {
+      isHome,
+    };
+  },
   data() {
     return {
       scrolled: 0,
@@ -128,7 +134,7 @@ export default defineComponent({
   },
   methods: {
     handleScroll() {
-      this.scrolled = window.scrollY > 0;
+      this.scrolled = window.scrollY;
     },
     scrollToTop() {
       if (window.innerWidth >= 1280) {
