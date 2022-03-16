@@ -72,6 +72,9 @@ export default {
         this.$store.commit("menu/toggle", val);
       },
     },
+    categoriesAll(){
+      return this.$store.state.categories
+    }
   },
   methods: {
     getDocPath(doc) {
@@ -90,7 +93,7 @@ export default {
       }
     },
     listCategories(path) {
-      const cates = this.$store.state.categories[this.$i18n.locale];
+      const cates = this.categoriesAll[this.$i18n.locale];
       const currentCates = {};
       _.each(cates, (item, key) => {
         if (!key) return;
@@ -127,6 +130,13 @@ export default {
       handler(to, from) {
         this.categories = this.getCategories();
       },
+      immediate: true,
+    },
+    categoriesAll: {
+      handler() {
+        this.categories = this.getCategories();
+      },
+      deep: true,
       immediate: true,
     },
   },
