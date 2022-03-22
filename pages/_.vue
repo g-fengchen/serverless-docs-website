@@ -95,7 +95,12 @@ export default {
       }
 
       let url = aTag.getAttribute("href");
-      url = decodeURI(url);
+      url = decodeURI(url).toLowerCase();
+      if(_.startsWith(url, '#')){
+        const target = document.querySelector(url);
+        target.scrollIntoView();
+        return;
+      }
       if (aTag.getAttribute("target") === '_blank') {
         window.open(url)
       } else {
