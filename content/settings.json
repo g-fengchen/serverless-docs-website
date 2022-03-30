@@ -20,12 +20,6 @@
       "en_title": "Docs",
       "name": "docs",
       "items": [
-        // {
-        //   "title": "SDM模型",
-        //   "en_title": "SMD Spec",
-        //   "slug": "sdm",
-        //   "to": "/sdm/readme"
-        // },
         {
           "title": "Serverless Devs",
           "en_title": "Serverless Devs",
