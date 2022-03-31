@@ -21,7 +21,7 @@
               'text-gray-700': !items.active,
             }"
           >
-            <NuxtLink :to="localePath(items.to)" class="inline-block h-full">
+            <NuxtLink :to="localePath(items.to)" class="inline-block h-full w-full">
               {{ $i18n.locale === "en" ? items.en_title : items.title }}
             </NuxtLink>
           </el-dropdown-item>

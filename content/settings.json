@@ -31,6 +31,18 @@
           "en_title": "Aliyun FC",
           "slug": "fc",
           "to": "/fc/readme"
+        },
+        {
+          "title": "SDM模型",
+          "en_title": "SDM spec",
+          "slug": "sdm",
+          "to": "/sdm/readme"
+        },
+        {
+          "title": "FC 常见问题",
+          "en_title": "FC FAQ",
+          "slug": "fc-faq",
+          "to": "/fc-faq/readme"
         }
       ]
     }
