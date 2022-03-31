@@ -86,9 +86,9 @@ export default {
       const currentPath = this.$router.history.current.path;
       const docsSetting = _.find(this.settings.nav, item => item.name ==='docs');
       for(let doc of docsSetting.items) {
-        const slugPath = `${basePath}/${doc.slug}`;
+        const slugPath = `${basePath}/${doc.slug}/`;
         if (currentPath.startsWith(slugPath)) {
-          return this.listCategories(`/${doc.slug}`);
+          return this.listCategories(`/${doc.slug}/`);
         }
       }
     },
