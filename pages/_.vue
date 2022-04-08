@@ -106,7 +106,6 @@ export default {
         window.open(url)
       } else {
         url = url.replace(/.md|zh\//ig, '' );
-        console.log(url);
         _.forEach(docs, (item) => {
           if(!item.redirect) return;
           _.forEach(item.redirect, (val,key) =>{
