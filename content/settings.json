@@ -21,6 +21,16 @@
       "name": "docs",
       "items": [
         {
+          "title": "SDM 模型",
+          "en_title": "SDM spec",
+          "slug": "sdm",
+          "to": "/sdm/readme",
+          "redirect": {
+            "spec/0.0.2/": "sdm/",
+            "spec/en/0.0.2/": "en/sdm/"
+          }
+        },
+        {
           "title": "Serverless Devs",
           "en_title": "Serverless Devs",
           "slug": "serverless-devs",
@@ -31,12 +41,6 @@
           "en_title": "Aliyun FC",
           "slug": "fc",
           "to": "/fc/readme"
-        },
-        {
-          "title": "SDM模型",
-          "en_title": "SDM spec",
-          "slug": "sdm",
-          "to": "/sdm/readme"
         },
         {
           "title": "FC 常见问题",
