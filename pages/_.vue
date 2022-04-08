@@ -99,10 +99,22 @@ export default {
       if(_.startsWith(url, '#')){
         url = url.toLowerCase();
       }
+
+      const docs = _.find(this.settings.nav, {'name': 'docs' }).items;
+
       if (aTag.getAttribute("target") === '_blank') {
         window.open(url)
       } else {
         url = url.replace(/.md|zh\//ig, '' );
+        _.forEach(docs, (item) => {
+          if(!item.redirect) return;
+          _.forEach(item.redirect, (val,key) =>{
+            if(_.includes(url, key)){
+              url = url.replace(key, val);
+              return;
+            }
+          })
+        })
         this.$router.push(url);
       }
     }
