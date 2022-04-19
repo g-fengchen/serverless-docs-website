@@ -43,6 +43,12 @@
           "to": "/fc/readme"
         },
         {
+          "title": "blog",
+          "en_title": "blog",
+          "slug": "blog",
+          "to": "/blog/readme"
+        },
+        {
           "title": "FC 常见问题",
           "en_title": "FC FAQ",
           "slug": "fc-faq",
