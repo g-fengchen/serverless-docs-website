@@ -43,9 +43,9 @@
           "to": "/fc/readme"
         },
         {
-          "title": "blog",
+          "title": "FC 博客",
           "en_title": "blog",
-          "slug": "FC 博客",
+          "slug": "blog",
           "to": "/blog/readme"
         },
         {
