@@ -85,7 +85,7 @@ export default {
   },
   methods: {
     handleClick(event) {
-      const aTag = _.find(event.path, item => (item.nodeName?.toLowerCase() === 'a'))
+      const aTag = _.find(event.path || (event?.composedPath()) , item => (item.nodeName?.toLowerCase() === 'a'))
       if(!aTag) return;
 
       if (event.preventDefault) {
