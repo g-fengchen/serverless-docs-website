@@ -44,9 +44,16 @@ export default {
   layout ({ store }) {
     return store.state.settings.layout || 'default'
   },
-  middleware ({ app, params, redirect }) {
+  middleware ({ app, params, redirect, store }) {
     if (params.pathMatch === 'index') {
       redirect(app.localePath('/'))
+    }
+
+    const path = params.pathMatch.split('/')
+    const docsSetting = _.find(store.state.settings.nav, item => item.name ==='docs');
+    const slugList = _.map(docsSetting.items, item => item.slug);
+    if(_.includes(slugList, path[0]) && !path[1] ){
+      redirect(app.localePath('/' + path[0] + '/readme'));
     }
   },
   async asyncData ({ $content, store, app, params, error }) {
@@ -85,7 +92,7 @@ export default {
   },
   methods: {
     handleClick(event) {
-      const aTag = _.find(event.path, item => (item.nodeName?.toLowerCase() === 'a'))
+      const aTag = _.find(event.path || (event?.composedPath()) , item => (item.nodeName?.toLowerCase() === 'a'))
       if(!aTag) return;
 
       if (event.preventDefault) {
