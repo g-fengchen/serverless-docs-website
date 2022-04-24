@@ -24,4 +24,31 @@ export default theme({
     defaultLocale: "zh",
   },
   buildModules: ["@nuxtjs/composition-api/module", "@nuxt/typescript-build"],
+  router: {
+    extendRoutes(routes){
+      const redirect = [
+        {
+          path: '/sdm',
+          redirect: '/sdm/readme',
+        },
+        {
+          path: '/serverless-devs',
+          redirect: '/serverless-devs/readme',
+        },
+        {
+          path: '/fc',
+          redirect: '/fc/readme',
+        },
+        {
+          path: '/blog',
+          redirect: '/blog/readme',
+        },
+        {
+          path: '/fc-faq',
+          redirect: '/fc-faq/readme',
+        },
+      ]
+      routes.push(...redirect)
+    }
+  }
 });
