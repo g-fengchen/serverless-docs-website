@@ -52,7 +52,7 @@ customRuntimeConfig:
 [Custom Runtime 文档](https://help.aliyun.com/document_detail/425055.html)
 
 
-**Q2: 为什么控制台自定义运行时入口有 java8, java11 和 java1,  有什么不同?**
+**Q2: 为什么控制台自定义运行时入口有 java8, java11 和 java17,  有什么不同?**
 
 A： java8 是 Custom Runtime 内置的 openjdk1.8, 其他两个是通过控制台自动帮您创建 layer 实现， 即 layer 里面是对应的 openjdk,  通过环境变量优先使用  layer 中的 openjdk
 
@@ -67,7 +67,7 @@ A：无区别， 本质上都是实现一个 HTTP Server 来接受请求
 - [HTTP请求处理程序](https://help.aliyun.com/document_detail/191345.html)
 
 
-**Q4: 我需要像写web服务器程序一样，去配置tomcat的连接池大小、accept connection最大数量、连接类型（aio、nio、native）、https等等参数么？**
+**Q4: 我需要像写web服务器程序一样，去配置tomcat的连接池大小、accept connection最大数量、连接类型（aio、nio、native）等参数么？**
 
 A: 需要， 您的 http server 需要实现有并发处理能力。 但是受您函数配置中的实例并发度约束， 即您实现的 HTTP Server 并发处理能力大于等于您函数配置中的实例并发度即可。
 > 即使您实现http server处理能力超级强，函数计算的调度系统也最多只同时最多派发“实例并发度”个并行的请求， 因此一旦您并发的请求大于当前已有实例的并行处理能力， 函数计算会自动给您百毫秒级扩容出新的实例。
