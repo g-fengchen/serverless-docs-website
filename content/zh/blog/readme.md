@@ -23,7 +23,10 @@ category: 'FC_Blog'
 
 对 Serverless PHP 感兴趣的同学， 可以加入 Serverless+PHP 专项交流钉钉群：31897696
 
-## Java SpringBoot 系列
+## Java 系列
+
+[函数计算 Java 开发手册](./java/FC-java-dev.md)
+### Custom Container Springboot 系列
 - [Springboot Serverless 实战 - 架构](./java/Springboot-Serverless实战-架构.md)
 - [SpringBoot Serverless 实战 - 部署](./java/Springboot-Serverless实战-部署.md)
 - [SpringBoot Serverless 实战 - 监控调试](./java/Springboot-Serverless实战-监控调试.md)
