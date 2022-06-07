@@ -22,7 +22,7 @@ category: 'FC_Blog'
 
 **Q1: 为什么 java8 SpringBoot 应用最佳选择是 Custom Runtime?**
 
-A:  针对Custom Runtime，您的代码文件ZIP包是一个HTTP Server程序，您只需设置函数配置中的启动命令和启动参数完成HTTP Server的启动。函数计算冷启动Custom Runtime时，会调用您设置的启动命令和启动参数启动您自定义的HTTP Server，该HTTP Server接管了来自函数计算的所有请求。HTTP Server的默认端口是9000，如果您的HTTP Server是其他端口，比如8080，您可以设置函数配置中的监听端口为8080。 Custom Runtime 内置了 openjdk1.8,  同时 SpringBoot 应用本身就是一个 HTTP Server 程序， 因此直接一键迁移到函数计算。
+A:  针对Custom Runtime，您的代码文件ZIP包是一个HTTP Server程序，您只需设置函数配置中的启动命令和启动参数完成HTTP Server的启动。函数计算冷启动Custom Runtime时，会调用您设置的启动命令和启动参数启动您自定义的HTTP Server，该HTTP Server接管了来自函数计算的所有请求。HTTP Server的默认端口是9000，如果您的HTTP Server是其他端口，比如8080，您可以设置函数配置中的监听端口为8080。 Custom Runtime 内置了 openjdk1.8,  同时 SpringBoot 应用本身就是一个 HTTP Server 程序， 因此可以零代码改造到函数计算。
 
 1.  无依赖的 jar 包直接作为代码包创建函数
 
@@ -34,6 +34,7 @@ customRuntimeConfig:
   args:
     - 'org.springframework.boot.loader.JarLauncher'
 ```
+![](https://img.alicdn.com/imgextra/i4/O1CN01kxfCN81FBgas6thjt_!!6000000000449-2-tps-1388-771.png)
 
 2.  无依赖的 jar 包打成 zip 包， 使用 zip 包作为代码包创建函数 
 
@@ -89,3 +90,18 @@ A： SpringBoot 慢不是函数计算系统层面调度容器慢， 主要是 Sp
 - 使用预留+闲置计费  [弹性管理](https://help.aliyun.com/document_detail/185038.html)
 
 - 尽量使用 Q1 中的 无依赖的 jar 包直接作为代码包创建函数， Runtime 层面会做一些加速方案
+
+**Q7:  SpringBoot 应用如何安全访问数据库？**
+
+A：可以通过给函数所在的服务配置 vpc,  然后函数代码中使用数据库 vpc 内网地址去访问， 请参考 [FC访问数据库](https://help.aliyun.com/document_detail/84514.html)
+
+
+**Q8:  SpringBoot 应用启动失败怎么排查原因？**
+
+A: 根据经验， 通常最有可能的原因是: SpringBoot 应用启动的时候需要访问 vpc 内网的资源， 比如配置中心 nacos， mysql 数据库等，因为 VPC 网络不通或者白名单限制导致, 详情可以参考 [访问RDS MySQL示例](https://help.aliyun.com/document_detail/147916.html)中的 "前提条件" 和 "配置数据库访问IP地址白名单" 有关网络和白名单的环节。
+
+您可以通过如下两种方案来去确定具体原因：
+
+- 函数所在服务配置日志， 通过日志服务查看 SpringBoot 启动日志。
+
+- 使用 S 工具[端云联调](https://docs.serverless-devs.com/fc/command/proxied)指令。
