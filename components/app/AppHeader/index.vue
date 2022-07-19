@@ -8,8 +8,8 @@
     <div class="container mx-auto flex-1">
       <div class="flex items-center justify-between h-16">
         <div class="w-max mr-8 flex items-center pr-4" @click.stop="noop">
-          <NuxtLink
-            :to="localePath('/')"
+          <a
+            :href="settings.url"
             class="flex-shrink-0 flex-1 font-bold text-xl"
             :aria-label="`${settings.title} Logo`"
           >
@@ -27,7 +27,7 @@
               class="h-12 max-w-full dark-img"
               :alt="settings.title"
             />
-          </NuxtLink>
+          </a>
         </div>
         <div
           v-if="settings.layout !== 'single'"
