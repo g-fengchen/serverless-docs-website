@@ -1,9 +1,8 @@
 <template>
-  <NewHome />
+  <Nuxt />
 </template>
 
 <script>
 export default {
-  layout: "home",
-};
+}
 </script>

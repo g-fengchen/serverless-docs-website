@@ -6,12 +6,21 @@
     "dark": "/logo-light.png"
   },
   "github": "Serverless-Devs/serverless-website",
+  "sdm": "Serverless-Devs/Serverless-Devs/tree/master/docs/zh/command",
+  "registry": "Serverless-Devs/registry-cli",
   "devs": "Serverless-Devs/Serverless-Devs",
   "fc": "devsapp/fc",
+  "lambda": "devscomp/lambda",
+  "cfc": "xinwuyun/cfc",
+  "fg": "xinwuyun/fg",
+  "scf": "devscomp/scf",
+  "fnf": "devsapp/fnf",
+  "sae": "devsapp/sae",
+  "OpenFunction": "OpenFunction/serverless-devs",
   "nav": [
     {
-      "title": "首页",
-      "en_title": "Index",
+      "title": "文档首页",
+      "en_title": "Docs Index",
       "slug": "index",
       "to": "/"
     },
@@ -20,6 +29,12 @@
       "en_title": "Docs",
       "name": "docs",
       "items": [
+        {
+          "title": "Serverless Devs",
+          "en_title": "Serverless Devs",
+          "slug": "serverless-devs",
+          "to": "/serverless-devs/readme"
+        },
         {
           "title": "SDM 模型",
           "en_title": "SDM spec",
@@ -31,28 +46,65 @@
           }
         },
         {
-          "title": "Serverless Devs",
-          "en_title": "Serverless Devs",
-          "slug": "serverless-devs",
-          "to": "/serverless-devs/readme"
+          "title": "Serverless Registry",
+          "en_title": "Serverless Registry",
+          "slug": "serverless-registry",
+          "to": "/serverless-registry/readme"
         },
         {
           "title": "函数计算(FC)组件",
           "en_title": "Aliyun FC",
           "slug": "fc",
-          "to": "/fc/readme"
+          "to": "/fc/readme",
+          "divided": true
         },
         {
-          "title": "FC 博客",
-          "en_title": "blog",
-          "slug": "blog",
-          "to": "/blog/readme"
+          "title": "AWS Lambda",
+          "en_title": "AWS Lambda",
+          "slug": "lambda",
+          "to": "/lambda/readme"
         },
         {
-          "title": "FC 常见问题",
-          "en_title": "FC FAQ",
-          "slug": "fc-faq",
-          "to": "/fc-faq/readme"
+          "title": "百度云函数计算（CFC）",
+          "en_title": "Baidu AI Cloud CFC",
+          "slug": "cfc",
+          "to": "/cfc/readme"
+        },
+        {
+          "title": "华为云函数计算（FG）",
+          "en_title": "Huawei Cloud FunctionGraph",
+          "slug": "fg",
+          "to": "/fg/readme"
+        },
+        {
+          "title": "腾讯云函数（SCF）",
+          "en_title": "Tencent Cloud Serverless Cloud Function",
+          "slug": "scf",
+          "to": "/scf/readme"
+        },
+        {
+          "title": "阿里云 Serverless 工作流（Serverless Workflow）",
+          "en_title": "Aliyun Serverless Workflow",
+          "slug": "fnf",
+          "to": "/fnf/readme"
+        },
+        {
+          "title": "阿里云 Serverless 应用引擎（Serverless Workflow）",
+          "en_title": "Aliyun Serverless App Engine",
+          "slug": "sae",
+          "to": "/sae/readme"
+        },
+        {
+          "title": "OpenFunction",
+          "en_title": "OpenFunction",
+          "slug": "open-function",
+          "to": "/open-function/readme",
+          "divided": true
+        },
+        {
+          "title": "Laf（即将支持）",
+          "en_title": "Laf (Coming Soon)",
+          "slug": "laf"
         }
       ]
     }

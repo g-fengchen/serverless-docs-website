@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span v-for="(link, index) in links">
+    <span v-for="(link, index) in links" :key="link.name">
       <el-dropdown class="ml-4" v-if="link.items">
         <span
           :class="{
@@ -16,6 +16,7 @@
           <el-dropdown-item
             v-for="(items, key) in link.items"
             :key="index + key"
+            :divided="items.divided"
             :class="{
               'text-current': items.active,
               'text-gray-700': !items.active,
