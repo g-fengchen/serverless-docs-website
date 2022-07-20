@@ -29,7 +29,7 @@
             </div>
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center" style="margin-top: 12px">
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                        <a href="#" class="nav-link" data-toggle="dropdown" role="button">
                             <i class="ni ni-ui-04 d-lg-none"></i>
                             <span class="nav-link-inner--text"><b>Start & Document</b></span>
                         </a>
@@ -98,7 +98,7 @@
                     <span class="text-white alpha-7 ml-3">Star on</span>
                     <a href="https://github.com/serverless-devs/serverless-devs" target="_blank"
                        title="Support us on Github">
-                        <img src="./assets/img/brand/github-white-slim.png" style="height: 22px; margin-top: -3px">
+                        <img src="https://www.serverless-devs.com/assets/img/brand/github-white-slim.png" style="height: 22px; margin-top: -3px">
                     </a>
                 </ul>
           </div>
