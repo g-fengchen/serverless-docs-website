@@ -89,7 +89,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a href="/index_en.html" class="nav-link" role="button">
+                <a href="/en/index.html" class="nav-link" role="button">
                   <i class="ni ni-collection d-lg-none"></i>
                   <span class="nav-link-inner--text"><b>English</b></span>
                 </a>
