@@ -396,7 +396,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="http://docs.serverless-devs.com" class="nav-link" target="_blank">Help documentation</a>
+                        <a href="http://docs.serverless-devs.com/en/index.html" class="nav-link" target="_blank">Help documentation</a>
                     </li>
                     <li class="nav-item">
                         <a href="http://i.serverless-devs.com" class="nav-link" target="_blank">iServerless</a>
