@@ -88,6 +88,12 @@
                   <span class="nav-link-inner--text"><b>社区工作组</b></span>
                 </a>
               </li>
+              <li class="nav-item dropdown">
+                <a href="/index_en.html" class="nav-link" role="button">
+                  <i class="ni ni-collection d-lg-none"></i>
+                  <span class="nav-link-inner--text"><b>English</b></span>
+                </a>
+              </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto" style="margin-top: 12px">
               <span class="text-white alpha-7 ml-3">Star on</span>
@@ -206,7 +212,7 @@
                     <a href="/lambda/readme" class="card-body py-5">
                       <h3 class="text" style="color: black"><b>Lambda</b>
                       </h3>
-                      <p class="description mt-3"><b>AWS Lambda 组件文档</b></p>
+                      <p class="description mt-3"><b>🔥🔥🔥 AWS Lambda 组件文档</b></p>
                       <div>
                         <span class="badge badge-pill badge-primary">云服务</span>
                         <span class="badge badge-pill badge-primary">函数计算</span>
@@ -219,7 +225,7 @@
                     <a href="/cfc/readme" class="card-body py-5">
                       <h3 class="text" style="color: black"><b>函数计算（CFC）</b>
                       </h3>
-                      <p class="description mt-3"><b>百度智能云函数计算（CFC）组件文档</b></p>
+                      <p class="description mt-3"><b>🔥 百度智能云函数计算（CFC）组件文档</b></p>
                       <div>
                         <span class="badge badge-pill badge-primary">云服务</span>
                         <span class="badge badge-pill badge-primary">函数计算</span>
@@ -241,7 +247,7 @@
                     <a href="/fg/readme" class="card-body py-5">
                       <h3 class="text" style="color: black"><b>函数计算工作流（FG）</b>
                       </h3>
-                      <p class="description mt-3"><b>华为云函数计算工作流（FG）组件文档</b>
+                      <p class="description mt-3"><b>🔥🔥 华为云函数计算工作流（FG）组件文档</b>
                       </p>
                       <div>
                         <span class="badge badge-pill badge-primary">云服务</span>
@@ -414,7 +420,7 @@ import { mapGetters } from 'vuex'
 export default {
   head() {
     return {
-      title: 'Serverless Devs - Serverless 应用全生命周期管理工具 / Serverless 中文社区',
+      title: '文档 - Serverless Devs - Serverless 应用全生命周期管理工具 / Serverless 中文社区',
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no" },
         {
