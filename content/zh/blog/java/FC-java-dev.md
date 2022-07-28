@@ -53,6 +53,7 @@ customRuntimeConfig:
 [Custom Runtime 文档](https://help.aliyun.com/document_detail/425055.html)
 
 **Q2: 函数计算能支持传统 java 微服务场景吗？**
+
 A: 函数计算可以作为微服务的消费端， 不能作为 Provider 端。
 
 以阿里云函数计算一个真实的企业客户为例：小王是一个业务驱动型的公司的开发， 公司为了提高业务迭代效率， 技术架构向全面云原生化演进， 减少基本设施的管理和运维， 架构大致如下：
