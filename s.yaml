@@ -19,7 +19,8 @@ services:
       region: cn-hongkong
       website:
         index: index.html
-        subDirType: index
+        subDir:
+          type: index
 
       # hosts:
       #   - host: auto
