@@ -105,7 +105,7 @@ export default {
       if (aTag.getAttribute("target") === '_blank') {
         window.open(url)
       } else {
-        url = url.replace(/.md|zh\//ig, '' );
+        url = url.replace(/\.md|zh\//ig, '' );
         _.forEach(docs, (item) => {
           if(!item.redirect) return;
           _.forEach(item.redirect, (val,key) =>{
