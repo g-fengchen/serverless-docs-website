@@ -6,7 +6,6 @@ category: '命令'
 ---
 # Clean 命令
 
-
 `clean`命令是清理 Serverless Devs 的缓存相关功能，可以通过该命令清理环境、不用的依赖包以及相关的缓存内容。
 
 - [命令解析](#命令解析)
@@ -31,7 +30,7 @@ Clean up the cache related functions of serverless devs. You can clean up the en
   Tips:
     Get all installed component: s component
     
-📖  Document: https://serverless.help/s/clean
+📖  Document: https://serverless.help/t/s/clean
 
 Options:
   --all                           Clean up the environment
